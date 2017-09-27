@@ -1,7 +1,6 @@
 There are multiple ways to iterate or loop a Map in Java.
 
 ## Using foreach in Java 8
-
 ```java runnable
 // { autofold
 import java.util.HashMap;
@@ -18,9 +17,11 @@ public static void main(String[] args) {
 		customers.put(2, "Smith");
 		customers.put(3, "Sally");
 
+		System.out.println("Using foreach in Java 8");
 		customers.forEach((id, name) -> {
 			System.out.println("Key : " + id + " value : " + name);
 		});
+
 
 //{ autofold
 }
@@ -30,7 +31,6 @@ public static void main(String[] args) {
 ```
 
 ## Using stream() in Java 8
-
 ```java runnable
 // { autofold
 import java.util.HashMap;
@@ -109,6 +109,7 @@ public static void main(String[] args) {
     for (Integer key : customers.keySet()) {
       System.out.println("Key : " + key + " value : " + customers.get(key));
     }
+
 //{ autofold
 }
 
@@ -146,7 +147,7 @@ public static void main(String[] args) {
 //}
 ```
 
-## Using iterator through the KeySe
+## Using iterator through the KeySet
 
 ```java runnable
 // { autofold
