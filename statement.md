@@ -1,6 +1,4 @@
-# Welcome!
-
-This Java template lets you get started quickly with a simple one-page playground.
+There are multiple ways to iterate or loop a Map in Java.
 
 ```java runnable
 // { autofold
@@ -22,21 +20,25 @@ public static void main(String[] args) {
 		customers.forEach((id, name) -> {
 			System.out.println("Key : " + id + " value : " + name);
 		});
+    System.out.println("------------------------");
 
 		System.out.println("Using stream() in Java 8");
 		customers.entrySet().stream().forEach(e ->
 				System.out.println("Key : " + e.getKey() + " value : " + e.getValue())
 		);
+    System.out.println("------------------------");
 
 		System.out.println("Using entrySet()");
 		for (Map.Entry<Integer, String> entry : customers.entrySet()) {
 			System.out.println("Key : " + entry.getKey() + " value : " + entry.getValue());
 		}
+    System.out.println("------------------------");
 
 		System.out.println("Using keySet()");
 		for (Integer key : customers.keySet()) {
 			System.out.println("Key : " + key + " value : " + customers.get(key));
 		}
+    System.out.println("------------------------");
 
 		System.out.println("Using iterator through map");
 		Iterator<Map.Entry<Integer, String>> iterator = customers.entrySet().iterator();
@@ -44,12 +46,15 @@ public static void main(String[] args) {
 			Map.Entry entry = iterator.next();
 			System.out.println("Key : " + entry.getKey() + " value : " + entry.getValue());
 		}
+    System.out.println("------------------------");
+
 		System.out.println("Using iterator through the KeySet");
 		Iterator<Integer> iterator1 = customers.keySet().iterator();
 		while (iterator1.hasNext()) {
 			Integer key = iterator1.next();
 			System.out.println("Key : " + key + " value : " + customers.get(key));
 		}
+    System.out.println("------------------------");
 
 //{ autofold
 }
@@ -58,6 +63,4 @@ public static void main(String[] args) {
 //}
 ```
 
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced Java template](https://tech.io/select-repo/385)
+Original post :- http://mydevgeek.com/6-ways-iterate-loop-map-java/
