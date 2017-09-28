@@ -1,6 +1,9 @@
 There are multiple ways to iterate or loop a Map in Java.
 
 ## Using foreach in Java 8
+
+If you using Java 8 this is the easiest way to loop the Map.
+
 ```java runnable
 // { autofold
 import java.util.HashMap;
@@ -12,7 +15,7 @@ public class Main {
 public static void main(String[] args) {
 // }
 
-    Map<Integer, String> customers = new HashMap<>();
+        Map<Integer, String> customers = new HashMap<>();
 		customers.put(1, "Jhon");
 		customers.put(2, "Smith");
 		customers.put(3, "Sally");
@@ -31,6 +34,9 @@ public static void main(String[] args) {
 ```
 
 ## Using stream() in Java 8
+
+This is also using in Java 8. If you want to filter some data while looping this is one of best way to do that.
+
 ```java runnable
 // { autofold
 import java.util.HashMap;
@@ -42,7 +48,7 @@ public class Main {
 public static void main(String[] args) {
 // }
 
-    Map<Integer, String> customers = new HashMap<>();
+        Map<Integer, String> customers = new HashMap<>();
 		customers.put(1, "Jhon");
 		customers.put(2, "Smith");
 		customers.put(3, "Sally");
@@ -118,6 +124,8 @@ public static void main(String[] args) {
 ```
 
 ## Using iterator through map
+
+This way is more suitable for when you need to remove some data while iterating.
 
 ```java runnable
 // { autofold
